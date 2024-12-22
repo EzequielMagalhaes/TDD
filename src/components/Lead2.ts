@@ -1,0 +1,1 @@
+//Second version of test class with the implementation of minimal assertiveness//
