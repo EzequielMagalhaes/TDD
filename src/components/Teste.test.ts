@@ -1,8 +1,8 @@
-import { Lead2 } from './Lead2'; // esse importe vai ser alterado dependendo da versão que executar, a versão final é a recomendada.
+import { LeadF } from './LeadF'; // esse importe vai ser alterado dependendo da versão que executar, a versão final é a recomendada.
 import { LeadEntity } from './LeadEntity';
 
 describe('TDD :: TYPESCRIPT :: SAMPLE', () => {
-    let tested: Lead2;
+    let tested: LeadF;
 
     /*
         beforeAll()     :: Executado uma vez antes de todos os testes (IT) do describe.
@@ -12,7 +12,7 @@ describe('TDD :: TYPESCRIPT :: SAMPLE', () => {
     */
 
     beforeEach(() => {
-        tested = new Lead2();
+        tested = new LeadF();
     });
 
     it('Adicionar um lead', () => {
@@ -23,7 +23,7 @@ describe('TDD :: TYPESCRIPT :: SAMPLE', () => {
     it('Pegar um lead', () => {
         const result = tested.get('teste@gmail.com');
         expect(result).toBeInstanceOf(LeadEntity);
-        //expect(result).toHaveProperty('name', 'carlos');
+        expect(result).toHaveProperty('name', 'carlos');
         expect(result).toHaveProperty('email', 'teste@gmail.com');
         expect(result).toHaveProperty('phone', '(99) 9.1234-5678');        
     });
